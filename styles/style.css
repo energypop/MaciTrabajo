@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+:root {
+  --title-font: "MedievalSharp", cursive;
+  --text-font: "Open Sans", sans-serif;
+}
+
+#name {
+  margin: 0;
+  text-align: center;
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.studies ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.studies ul li {
+  background-image: url(../img/book-solid.svg);
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+  padding-left: 1em;
+  background-size: 1em;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(5, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  gap: auto;
+  justify-content: center;
+}
+/* ! Reparar los layouts. Esta muy mal pensado por las prisas. Las cosas no estan bien ordenadas */
+.experience {
+  grid-area: 1 / 1 / 6 / 4;
+}
+
+.studies {
+  grid-area: 1 / 4 / 6 / 7;
+}
+
+.experience,
+.studies {
+  border: solid 2px black;
+}
+
+.experience,
+.studies {
+  outline: solid 2px black;
+  padding: 1em;
+}
+
+.icon {
+  display: flex;
+  height: 20px;
+  width: auto;
+}
+
+.flexly {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 657px) {
+  .flexly {
+    flex-direction: column;
+  }
+}
+
+.flexchild {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-right: 1em;
+  font-size: 1.2em;
+}
+
+.flexly img {
+  width: 3vh;
+  height: auto;
+}
+
+body {
+  font-family: var(--text-font);
+  margin: 1em;
+}
+
+h2 {
+  text-align: center;
+}
